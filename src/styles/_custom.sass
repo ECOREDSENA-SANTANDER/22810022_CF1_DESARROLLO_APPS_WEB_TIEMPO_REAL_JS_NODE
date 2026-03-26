@@ -112,6 +112,9 @@ figcaption
   color: #1B961B !important
 .ct4
   color: #D70113 !important
+.ct5
+  color: #B1B1B3 !important
+
 
 .titulo-icono
   width: fit-content
@@ -184,6 +187,24 @@ table
     border-left-color: #484A36
   .pasos-a__linea__esquina__linea
     border-color: #484A36
+.tabs-b
+  border-bottom: 1px solid #cacaca
+  &__tab
+    background-color: #C6FFCF
+    border-bottom: 0px
+    border-right: 1px solid $white
+    &--active
+      background-color: #FFFFEB
+      border-top-color: #FFFFEB !important
+      .tabs-b__tab__icon
+        filter: sepia(1) opacity(65%)
+    &__title
+      font-weight: bold
+.tabs-b__tab--active:active, .tabs-b__tab--active:focus, .tabs-b__tab--active:hover, 
+.tabs-b__tab:active, .tabs-b__tab:focus, .tabs-b__tab:hover
+  background-color: #FFFFEB
+
+      
 
 
 .crd--avatarHorizontal
@@ -218,43 +239,143 @@ ul.lista-ul.fa-lista
   i.fa-circle
     font-size: 0.3rem
     top: 0.6rem
+.sin-linea
+  td, th
+    border: 0 !important
 
 
-
-
-.linea-tiempo-c__header__btn, .linea-tiempo-c__header__btn--left, .linea-tiempo-c__header__btn--right, .pasos-b__header__btn--left, .pasos-b__header__btn--right
-  border: 0 !important
-  background-color: $color-acento-botones !important
-.pasos-b__header__item--before .pasos-b__header__item__dot
-  border-color: $color-primario !important
-  background-color: $color-primario !important
-.pasos-b__header__item__dot i 
-  color: $color-sistema-texto !important
-.pasos-b__header__item--before .pasos-b__header__item__line-container:before, .pasos-b__header__item--before .pasos-b__header__item__line-container:after,
-.pasos-b__header__item--active .pasos-b__header__item__line-container:before
-  background-color: $color-primario !important
-.pasos-b__header__item:first-child .pasos-b__header__item__line-container:before
-  background-color: transparent !important
-.pasos-b__header__item__dot 
-  border: 3px solid #144567
-.tarjeta--boton.color-acento-contenido
-  background-color: #EDFDEF
-  text-align: center !important
-.tarjeta--boton.color-acento-contenido:active, 
-.tarjeta--boton.color-acento-contenido:focus,
-.tarjeta--boton.color-acento-contenido:hover
-  background-color: #B9F0E8 !important
-.tabs-c__tab
-  border-bottom: 4px solid #0F5F6B
-  background-color: $color-primario
-.tabs-c.color-acento-contenido .tabs-c__tab--active
-  font-weight: bold
-  background-color: #fff !important
-.tabs-c__content-item
+$dot-size: 18px
+$dot-border: 5px
+.linea-tiempo-h
+  width: 100%
+  display: flex
+  flex-direction: row
+  align-items: flex-start
   position: relative
-  top: -15px
-  z-index: 0
-.tabs-c__tab--active:before
-  z-index: 99
-.tabs-c
-  border-bottom: none
+  padding: 0
+  margin: 0
+  list-style: none
+  &::before
+    content: ''
+    position: absolute
+    top: 65px
+    left: calc(#{$dot-size} / 2)          // arranca en el centro del primer dot
+    right: calc(#{$dot-size} / 2)         // termina en el centro del último dot
+    height: 5px
+    background: #B9F0E8
+    z-index: 0
+  &__item
+    flex: 1
+    display: flex
+    flex-direction: column
+    align-items: center
+    position: relative
+    text-align: center
+    &--last::after
+      display: none
+    &__header
+      display: flex
+      flex-direction: column
+      align-items: center
+      line-height: 1.2
+      margin-bottom: 6px
+    &__dot
+      width: $dot-size
+      height: $dot-size
+      border-radius: 50%
+      border: $dot-border solid #69D2CD
+      background: $white
+      position: relative
+      z-index: 1
+      margin-bottom: 16px
+      transition: border-color .2s
+    &__body
+      display: flex
+      flex-direction: column
+      align-items: center
+      gap: 10px
+    &__icono
+      width: 100px
+      height: 100px
+      border-radius: 5px
+      background: #B9F0E8
+      display: flex
+      align-items: center
+      justify-content: center
+      color: $color-primario
+      position: relative
+      overflow: hidden
+      &::after
+        content: ''
+        position: absolute
+        inset: 0
+        background: #B9F0E8          
+        pointer-events: none
+      img
+        z-index: 99
+    &__descripcion
+      line-height: 1.5
+      margin: 0
+      max-width: 150px
+      strong
+        display: block
+
+  @mixin dot-color($color)
+    .linea-tiempo-h__item__dot
+      border-color: $color
+    &::before
+      background: #B9F0E8
+  &.color-primario
+    @include dot-color($color-primario)
+  &.color-secundario
+    @include dot-color($color-secundario)
+  &.color-acento-contenido
+    @include dot-color($color-acento-contenido)
+  &.color-acento-botones
+    @include dot-color($color-acento-botones)
+  @media (max-width: $bp-max-sm)
+    flex-direction: column
+    align-items: flex-start
+    &::before
+      top: calc(#{$dot-size} / 2)
+      bottom: calc(#{$dot-size} / 2)
+      left: 13.2%
+      right: auto
+      width: 5px
+      height: auto
+    &__item
+      flex-direction: row
+      align-items: flex-start
+      text-align: left
+      width: 100%
+      padding: 0 0 32px 0
+      gap: 16px
+      &__header
+        align-items: center
+        min-width: 60px
+      &__dot
+        margin-bottom: 0
+        margin-top: 4px
+      &__body
+        align-items: flex-start
+        display: flex
+        flex-direction: row
+      &__descripcion
+        max-width: none                
+      &__icono
+        width: 100px
+        height: 100px
+      &__descripcion
+        width: 40%
+  @media (max-width: $bp-max-xs)
+    &::before
+      top: calc(#{$dot-size} / 2)
+      bottom: calc(#{$dot-size} / 2)
+      left: 21.7%
+      right: auto
+      width: 5px
+      height: auto
+    &__item
+      &__icono
+        width: 90px
+        height: 90px

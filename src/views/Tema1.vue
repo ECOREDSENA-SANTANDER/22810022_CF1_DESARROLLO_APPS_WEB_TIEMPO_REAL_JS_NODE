@@ -535,13 +535,13 @@
     .row.justify-content-center.mb-4
       .col-lg-10
         .tarjeta.tarjeta--gris.p-4.px-lg-5
-            p Javascript
-            p.mb-0 #[span.ct1 let] totalAsistencias = #[span.ct3 0];
-              p.mb-1 #[span.ct1 for] (#[span.ct1 let] i = #[span.ct3 0]; i < marcacionesDelMes.length; i++) {
-              p.mb-1.ps-2 #[span.ct1 if] (marcacionesDelMes[i].asistio === #[span.ct3 true]) {
-              p.mb-1.ps-4 totalAsistencias++;
-              p.mb-1.ps-2 }
-              p.mb-0 }
+          p Javascript
+          p.mb-0 #[span.ct1 let] totalAsistencias = #[span.ct3 0];
+            p.mb-1 #[span.ct1 for] (#[span.ct1 let] i = #[span.ct3 0]; i < marcacionesDelMes.length; i++) {
+            p.mb-1.ps-2 #[span.ct1 if] (marcacionesDelMes[i].asistio === #[span.ct3 true]) {
+            p.mb-1.ps-4 totalAsistencias++;
+            p.mb-1.ps-2 }
+            p.mb-0 }
     
     .bg1
       .row.justify-content-center.align-items-center
