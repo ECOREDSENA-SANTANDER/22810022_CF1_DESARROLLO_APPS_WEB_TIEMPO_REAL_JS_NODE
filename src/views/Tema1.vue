@@ -22,7 +22,7 @@
           p.mb-0 Una variable en JavaScript es un identificador que permite acceder a un valor durante la ejecución del programa. Sin embargo, quedarse solo con la idea de que es únicamente "una caja donde se guardan cosas" lleva pronto a errores difíciles de rastrear: valores que cambian de forma inesperada, datos que se pierden y comportamientos distintos asociados al uso de palabras clave como var, let y const.
         p.mb-0 Una forma clara de entender este concepto es pensar en una mudanza. Para trasladar objetos de un lugar a otro, no se llevan sueltos; se utilizan cajas. A cada caja se le coloca una etiqueta ("Libros", "Cables", "Documentos") y luego se guarda el contenido en su interior. En JavaScript, una variable funciona exactamente así: una caja con una etiqueta donde se guarda información para utilizarla más adelante en el programa.
         p En el pasado, JavaScript utilizaba la palabra #[strong var] para crear estas cajas. Sin embargo, el lenguaje ha evolucionado y hoy se emplean dos términos más precisos: #[strong let] y #[strong const].
-      .col-lg-4(data-aos="fade-left")
+      .col-lg-4.d-none.d-lg-block(data-aos="fade-left")
         img(src='@/assets/curso/temas/t1/2.png', alt='')
 
     .mb-4
@@ -58,9 +58,9 @@
       h2 1.2  Tipos de datos
 
     .row.justify-content-center.align-items-center.mb-5
-      .col-lg-5
+      .col-lg-5.col-md-10.mb-3.mb-lg-0(data-aos="fade-right")
         img(src='@/assets/curso/temas/t1/4.png', alt='')
-      .col-lg-7
+      .col-lg-7(data-aos="fade-left")
         .row.justify-content-center.align-items-center.mb-4
           .col-lg-2.col-md-2.col-3
             img(src='@/assets/curso/temas/t1/5.svg', alt='')
@@ -123,7 +123,7 @@
               i.fas.fa-circle
               span.mb-0 Una forma de controlar el contexto (definir qué variables puede "ver" y qué estado puede modificar).
         p En JavaScript, las funciones son "ciudadanas de primera clase": pueden guardarse en variables, pasarse como argumentos y devolverse como resultados. Esto permite patrones potentes como los callbacks y las funciones de orden superior, pero también exige claridad para evitar confusión.
-      .col-lg-4(data-aos="fade-left")
+      .col-lg-4.d-none.d-lg-block(data-aos="fade-left")
         img(src='@/assets/curso/temas/t1/6.png', alt='')
 
     AcordionA(tipo="a" clase-tarjeta="tarjeta bg-color-acento-contenido" data-aos="fade")
@@ -145,7 +145,7 @@
             li.mb-0
               i.fas.fa-circle
               span.mb-0 Valor de #[b this] (que depende de cómo se invoca la función).
-        .col-lg-5.col-11
+        .col-lg-5.d-none.d-lg-block
           img(src='@/assets/curso/temas/t1/acord1-1.png', alt='')
       .row.justify-content-center(titulo="Alcance léxico y <em>closures</em>")
         .col-11
@@ -185,7 +185,7 @@
 
     .bg1.mb-5
       .row.justify-content-center.align-items-center
-        .col-lg-5.col-md-8
+        .col-lg-5.d-none.d-lg-block
           img(src='@/assets/curso/temas/t1/7.png', alt='')
         .col-lg-7
           .p-4
@@ -248,10 +248,10 @@
             .col-lg-8.mb-3.mb-md-0
               h4 Paso 1. Copia superficial (#[em shallow copy])
               p.mb-0 Utilizando el operador de propagación o #[em spread] #[b ({...objeto})], se copian las propiedades del primer nivel. Sin embargo, si dentro del archivero hay un objeto o arreglo interno, ambas copias seguirán compartiendo la misma referencia a esa estructura interna.
-            .col-lg-4
+            .col-lg-4.col-md-8
               img(src='@/assets/curso/temas/t1/pasos1-1.svg', alt='')
           .row.align-items-center.justify-content-center
-            .col-lg-4.mb-3.mb-md-0
+            .col-lg-4.col-md-8.mb-3.mb-lg-0
               img(src='@/assets/curso/temas/t1/pasos1-2.svg', alt='')
             .col-lg-8
               h4 Paso 2. Copia profunda (#[em deep copy])
@@ -290,7 +290,7 @@
               li.mb-0
                 i.fas.fa-circle
                 span.mb-0 #[b Versionar] (crear nuevos objetos inmutables) facilita la auditoría y reduce errores de concurrencia cuando cientos de aprendices votan simultáneamente.
-        .col-lg-5.col-md-8
+        .col-lg-5.d-none.d-lg-block
           img(src='@/assets/curso/temas/t1/12.png', alt='')
 
     p En proyectos con requisitos estrictos de trazabilidad, como sistemas de educación, registros médicos o auditorías financieras, la mutabilidad descontrolada es un riesgo serio. Si las evidencias de aprendizaje pueden ser manipuladas accidentalmente en la memoria, el sistema pierde su validez. Por ello, ante cada objeto diseñado, un desarrollador con criterio profesional se detiene a preguntar: ¿Quién tiene el permiso real de cambiar esto? ¿Cómo se verifica que el cambio fue legítimo? ¿Qué evidencia queda de dicha modificación?
@@ -300,7 +300,7 @@
       h2 1.5  Estructuras de control y condicionales
 
     .row.justify-content-center.mb-5
-      .col-lg-5(data-aos="fade-right")      
+      .col-lg-5.col-md-9.mb-3.mb-lg-0(data-aos="fade-right")      
         img(src='@/assets/curso/temas/t1/13.png', alt='')
       .col-lg-7(data-aos="fade-left")
         p Una vez comprendido cómo almacenar información en variables, agruparla en objetos y procesarla mediante funciones, surge una necesidad ineludible: dotar a la aplicación de "inteligencia" básica. Es aquí donde las estructuras de control y condicionales hacen su aparición. Si las funciones son los motores de una aplicación, los condicionales son el volante que decide hacia dónde debe girar ese motor según el entorno.
@@ -322,7 +322,7 @@
           li
             i.fas.fa-comment-dots
             span.mb-0 Asignar rutas de aprendizaje personalizadas según el nivel del usuario.     
-      .col-lg-5(data-aos="fade-left")
+      .col-lg-5.d-none.d-lg-block(data-aos="fade-left")
         img(src='@/assets/curso/temas/t1/14.png', alt='') 
 
     .row.align-items-center.titulo-icono.mb-4(data-aos='fade-right')
@@ -376,22 +376,22 @@
       .col-lg-10
         PasosA.color-primario(tipo="n")
           .row.align-items-center.justify-content-center
-            .col-lg-8.mb-3.mb-md-0
+            .col-lg-8.mb-3.mb-lg-0
               h4 Paso 1. 
               p.mb-0 Verificar si el contenido fue completado (#[b completoContenido]).
-            .col-lg-4
+            .col-lg-4.col-md-7
               img(src='@/assets/curso/temas/t1/pasos2-1.svg', alt='')
           .row.align-items-center.justify-content-center
-            .col-lg-4.mb-3.mb-md-0
+            .col-lg-4.col-md-7.mb-3.mb-lg-0
               img(src='@/assets/curso/temas/t1/pasos2-2.svg', alt='')
             .col-lg-8
               h4 Paso 2. 
               p.mb-0 Si la condición es #[b false]: registrar el intento fallido y mostrar mensaje de orientación.     
           .row.align-items-center.justify-content-center
-            .col-lg-8.mb-3.mb-md-0
+            .col-lg-8.mb-3.mb-lg-0
               h4 Paso 3. 
               p.mb-0 Si la condición es #[b true]: habilitar la evaluación y notificar al aprendiz.
-            .col-lg-4
+            .col-lg-4.col-md-7
               img(src='@/assets/curso/temas/t1/pasos2-3.svg', alt='')             
 
     .row.justify-content-center.mb-5
@@ -440,7 +440,7 @@
             i.fas.fa-comment-dots
             span.mb-0 Un cronograma de sesiones virtuales.
         p El ciclo es la herramienta fundamental para recorrer y procesar esas listas.
-      .col-lg-4(data-aos="fade-left")
+      .col-lg-4.d-none.d-lg-block(data-aos="fade-left")
         img(src='@/assets/curso/temas/t1/18.png', alt='')
 
     .row.align-items-center.titulo-icono.mb-4(data-aos='fade-right')
@@ -506,7 +506,7 @@
           li
             i.fas.fa-comment-dots
             span.mb-0 ¿Existen alternativas más eficientes? (filtrar, paginar de 10 en 10 o indexar la información).
-      .col-lg-4(data-aos="fade-left")
+      .col-lg-4.d-none.d-lg-block(data-aos="fade-left")
         img(src='@/assets/curso/temas/t1/19.png', alt='')
 
     .row.align-items-center.titulo-icono.mb-4(data-aos='fade-right')
@@ -545,7 +545,7 @@
     
     .bg1
       .row.justify-content-center.align-items-center
-        .col-lg-5.col-md-8
+        .col-lg-5.d-none.d-lg-block
           img(src='@/assets/curso/temas/t1/20.png', alt='')
         .col-lg-7
           .p-4
@@ -567,7 +567,7 @@
         .bg5.p-4.mb-4
           p.mb-0 Luego de dominar cómo el código toma decisiones mediante condicionales y cómo procesa grandes volúmenes de información a través de los ciclos, se enfrenta a una revelación fundamental en el desarrollo profesional: hacer que el código funcione es apenas el primer paso; el verdadero reto es hacerlo comprensible.
         p.mb-0 En el entorno del desarrollo web existe una máxima inquebrantable: el código se escribe principalmente para que lo lean otros seres humanos, no solo para que lo ejecuten las máquinas. A la computadora le da exactamente igual si una función se llama x123 o si tiene mil líneas de largo; la máquina la traducirá y la ejecutará. Sin embargo, para el equipo de desarrollo que deba mantener esa plataforma en el futuro, o para el propio creador semanas después, leer un código desordenado es como intentar descifrar un texto sin signos de puntuación ni espacios.
-      .col-lg-4(data-aos="fade-left")
+      .col-lg-4.col-md-8(data-aos="fade-left")
         img(src='@/assets/curso/temas/t1/22.png', alt='')              
 
     p La programación tiene una analogía directa con la redacción de un libro: el lenguaje de programación es la gramática, pero el clean code (código limpio) es el estilo, la ortografía y la coherencia de la historia.
@@ -595,7 +595,7 @@
         h3.mb-0.titulo-icono-text.py-2.ps-md-3 El principio de responsabilidad única
 
     .row.justify-content-center.align-items-center.mb-4
-      .col-lg-5.col-md-8(data-aos="fade-right")
+      .col-lg-5.col-md-10.mb-3.mb-lg-0(data-aos="fade-right")
         img(src='@/assets/curso/temas/t1/23.png', alt='')
       .col-lg-7(data-aos="fade-left")
         .row.justify-content-center.align-items-center.mb-4

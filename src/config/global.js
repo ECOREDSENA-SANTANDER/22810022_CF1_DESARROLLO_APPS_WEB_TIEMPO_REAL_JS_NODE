@@ -117,12 +117,12 @@ export default {
           },
           {
             numero: '3.3',
-            titulo: 'Conceptos de TCP y sockets',
+            titulo: 'Conceptos de TCP y <em>sockets</em>',
             hash: 't_3_3',
           },
           {
             numero: '3.4',
-            titulo: 'Ciclo de vida y event loop',
+            titulo: 'Ciclo de vida y <em>event loop</em>',
             hash: 't_3_4',
           },
           {
