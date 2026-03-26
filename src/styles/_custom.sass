@@ -2,14 +2,21 @@
   &-1
     animation: float1 3.5s ease-in-out infinite alternate
     position: absolute
-    top: 20%
-    right: 10%
+    top: 5%
+    right: 90%
+    width: 40px
   &-2
     animation: float1 2.8s ease-in-out infinite alternate
     position: absolute
-    top: 51%
-    right: 30%
-
+    top: 61%
+    right: 45%
+    width: 150px
+  &-3
+    animation: float1 3.5s ease-in-out infinite alternate
+    position: absolute
+    top: 30%
+    right: 78%
+    width: 85px
 @keyframes float1
   0%
     transform: translateY(20px)
@@ -17,14 +24,237 @@
     transform: translateY(0px)
   
 
-.banner-principal .tarjeta
-  background-position: left 50% !important
 .banner-principal__row .banner-principal__img
-  width: 400px !important  
-.titulo-principal.color-acento-contenido .titulo-principal__numero span
-  color: white !important   
+  max-width: 500px
 .banner-interno__titulo__icono i
   color: $color-primario
 figcaption
   font-weight: normal
  
+
+.fa-lista
+  li
+    display: flex !important
+    align-items: flex-start
+  li:before
+    position: relative
+    margin-right: 7px
+    font-size: 1.4rem 
+.banner-interno .banner-interno__fondo
+  background-image:  url('../assets/curso/portada/mini-portada.png') !important
+.lista-ul--color.color-primario li > i:first-of-type  
+  color: $color-primario
+.lista-ul--color.color-secundario li > i:first-of-type  
+  color: $color-secundario     
+.lista-ul--color.color-adicional-1 li > i:first-of-type  
+  color: $color-adicional-1  
+.lista-ul--color.color-adicional-2 li > i:first-of-type  
+  color: $color-adicional-2  
+.lista-ol--cuadro.color-primario .lista-ol--cuadro__vineta
+  background-color: $color-primario
+.bg-color-acento-botones
+  background-color: $color-acento-botones
+.bg-color-acento-contenido
+  background-color: $color-acento-contenido
+.bg-color-primario
+  background-color: $color-primario
+.bg-color-secundario
+  background-color: $color-secundario
+.bg-color-sistema-texto
+  background-color: $color-sistema-texto
+.text-color-sistema
+  color: $color-sistema-texto !important
+.bg-color-adicional-1
+  background-color: $color-adicional-1
+.ct-color-primario
+  color: $color-primario
+.w-fit
+  width: fit-content
+.columns-2
+  columns: 2
+.tc-sec 
+  color: $color-secundario !important
+.tc-ac 
+  color: $color-acento-contenido !important
+.font-italic
+  font-style: italic !important
+.sin-borde
+  border: 0px !important
+.br-top
+  border-top-left-radius: 20px 
+  border-top-right-radius: 20px 
+.br-left
+  border-top-left-radius: 20px 
+  border-bottom-left-radius: 20px 
+.br-right
+  border-top-right-radius: 20px 
+  border-bottom-right-radius: 20px 
+.bloque-texto-g__texto * 
+  display: block
+
+.bg1
+  background-color: #EDFDEF
+.bg2
+  background-color:#F6F6F6  
+.bg3
+  background-color:#E3E8C0
+.bg4
+  background-color:#FFFFEB
+.bg5
+  background-color:#F2F6E6
+.bg6
+  background-color:#F8F8C5
+.ct1
+  color: #901ECE !important
+.ct2
+  color: #0070C0 !important
+.ct3
+  color: #1B961B !important
+.ct4
+  color: #D70113 !important
+
+.titulo-icono
+  width: fit-content
+  position: relative
+  left: 12px
+  background-color: $color-adicional-2
+  border-radius: 30px 
+  &-text
+    margin-right: 10px
+    margin-left: 45px
+    @media screen and (max-width: 767px)
+      margin-left: 0px      
+  &-img
+    padding: 0px
+    position: absolute
+    top: -10px
+    @media screen and (max-width: 767px)
+      display: none
+    img
+      position: relative
+      max-width: 60px
+  @media screen and (max-width: 767px)
+    left: 0px
+.titulo-icono-2
+  background-color: #F7F7D7
+  border-top-right-radius: 30px
+  border-bottom-right-radius: 30px
+  width: fit-content
+  &-text
+    margin-right: 10px
+    margin-left: 10px
+.cajon.color-adicional-1
+  background-color: #EDFDEF
+  &:before
+    background-color: #0F5F6B
+table 
+  tr, td, th
+    vertical-align: top
+    text-align: left !important
+.acordion 
+  &__activo
+    background-color: #B9F0E8 !important
+  &__accion__btn--a
+    background-color: #A6F6AF 
+    box-shadow: none !important
+.acordion__activo .acordion__accion__btn--a
+  background-color: #69D2CD 
+.slyder-a__btn--sigt, .slyder-a__btn--atrs
+  background-color: $color-acento-botones
+  border: 0
+  box-shadow: none
+.slyder-a__bullets__item
+  background-color: #DBE0E3
+  border: 0
+.slyder-a__bullets__item--active
+  background-color: #B6C1C6
+.tabs-a__tab 
+  background-color: #F2F6E6
+.tabs-a__tab__text 
+  white-space: normal
+  font-weight: bold
+.pasos-a.color-primario 
+  .pasos-a__circle
+    background-color: #484A36
+    .h2
+      color: $white !important
+  .pasos-a__linea .hor-line
+    border-top-color: #484A36
+  .pasos-a__numero::after
+    border-left-color: #484A36
+  .pasos-a__linea__esquina__linea
+    border-color: #484A36
+
+
+.crd--avatarHorizontal
+  position: relative
+  padding-right: 2rem
+  & > *
+    position: relative
+  p
+    margin-bottom: 0
+  &::before
+    position: absolute
+    content: ''
+    top: 0
+    right: 0
+    width: calc( 100% - 60px)
+    height: 100%
+    background-color: #F7F7D7
+  @media (max-width: 1000px)
+    padding-right: 2rem
+.crd--first
+  &::before
+    border-top-left-radius: 30px
+    background-color: #F7F7D7 !important
+.crd--scd
+  &::before
+    background-color: #E3E8C0 !important
+.crd--last
+  &::before
+    border-bottom-left-radius: 30px
+    background-color: #E3E8C0 !important
+ul.lista-ul.fa-lista
+  i.fa-circle
+    font-size: 0.3rem
+    top: 0.6rem
+
+
+
+
+.linea-tiempo-c__header__btn, .linea-tiempo-c__header__btn--left, .linea-tiempo-c__header__btn--right, .pasos-b__header__btn--left, .pasos-b__header__btn--right
+  border: 0 !important
+  background-color: $color-acento-botones !important
+.pasos-b__header__item--before .pasos-b__header__item__dot
+  border-color: $color-primario !important
+  background-color: $color-primario !important
+.pasos-b__header__item__dot i 
+  color: $color-sistema-texto !important
+.pasos-b__header__item--before .pasos-b__header__item__line-container:before, .pasos-b__header__item--before .pasos-b__header__item__line-container:after,
+.pasos-b__header__item--active .pasos-b__header__item__line-container:before
+  background-color: $color-primario !important
+.pasos-b__header__item:first-child .pasos-b__header__item__line-container:before
+  background-color: transparent !important
+.pasos-b__header__item__dot 
+  border: 3px solid #144567
+.tarjeta--boton.color-acento-contenido
+  background-color: #EDFDEF
+  text-align: center !important
+.tarjeta--boton.color-acento-contenido:active, 
+.tarjeta--boton.color-acento-contenido:focus,
+.tarjeta--boton.color-acento-contenido:hover
+  background-color: #B9F0E8 !important
+.tabs-c__tab
+  border-bottom: 4px solid #0F5F6B
+  background-color: $color-primario
+.tabs-c.color-acento-contenido .tabs-c__tab--active
+  font-weight: bold
+  background-color: #fff !important
+.tabs-c__content-item
+  position: relative
+  top: -15px
+  z-index: 0
+.tabs-c__tab--active:before
+  z-index: 99
+.tabs-c
+  border-bottom: none

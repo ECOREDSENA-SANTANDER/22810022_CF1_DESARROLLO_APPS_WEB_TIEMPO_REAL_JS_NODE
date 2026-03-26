@@ -7,7 +7,7 @@
     p.mb-4 Asimismo, el dominio del entorno de servidor con Node.js, el manejo de la concurrencia asíncrona y la implementación de conexiones persistentes confirman que el rendimiento es el pilar fundamental de la interactividad. Asumir un rol analítico y crítico frente a la evaluación de herramientas tecnológicas de terceros permite estructurar proyectos con rigor profesional, garantizando plataformas seguras, estables y plenamente alineadas con las exigencias de los usuarios y del ecosistema digital moderno.
     
     .row.justify-content-center
-      .col-lg-10.mb-5.bgs.p-4.brad
+      .col-lg-10.mb-5.p-4
         figure
           img(src="@/assets/curso/sintesis.svg", alt="Mapa conceptual sobre los fundamentos de JavaScript y Node.js para desarrollo web. Presenta cuatro ejes temáticos: fundamentos del lenguaje, programación orientada a objetos, entorno Node.js y selección de herramientas. En fundamentos se agrupan variables, tipos de datos, funciones, objetos, condicionales, ciclos y código limpio. En programación orientada a objetos se incluyen prototipos, clases, organización del código, encapsulación, herencia y composición. En Node.js se integran entorno de ejecución, asincronía, npm, WebSockets, event loop, instalación y seguridad. En selección de herramientas se consideran mantenibilidad, comunidad, rendimiento, licencia y matriz de decisión.")
       .col-auto
@@ -16,6 +16,7 @@
             img(src="@/assets/bullets/icono-pdf.svg")
           .anexo__texto
             p Anexo. Síntesis
+
 
 </template>
 
