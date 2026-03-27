@@ -62,17 +62,17 @@
         img(src='@/assets/curso/temas/t2/4.png', alt='')
       .col-lg-7(data-aos="fade-left")
         p ¿Por qué JavaScript utiliza esta cadena invisible? La respuesta es eficiencia extrema en el consumo de recursos.
-        p Cuando se solicita a un objeto ejecutar la acción saludar():
+        p Cuando se solicita a un objeto ejecutar la acción #[b saludar()]:
         ul.lista-ul--color.fa-lista
           li
             i.fas.fa-comment-dots
-            span.mb-0 El motor de JavaScript primero revisa las propiedades propias del objeto específico. Si sabe cómo saludar(), lo hace.
+            span.mb-0 El motor de JavaScript primero revisa las propiedades propias del objeto específico. Si sabe cómo #[b saludar()], lo hace.
           li
             i.fas.fa-comment-dots
             span.mb-0 Si no tiene esa habilidad directamente, no arroja un error inmediato. En su lugar, “pasa la pregunta hacia arriba” y revisa su prototipo.
           li
             i.fas.fa-comment-dots
-            span.mb-0 Si el prototipo sabe saludar(), el objeto toma prestada esa habilidad y la ejecuta. Si tampoco sabe, se consulta el prototipo del prototipo, y así sucesivamente.
+            span.mb-0 Si el prototipo sabe #[b saludar()], el objeto toma prestada esa habilidad y la ejecuta. Si tampoco sabe, se consulta el prototipo del prototipo, y así sucesivamente.
 
     p Esta delegación permite que cientos de objetos compartan los mismos métodos en la Memoria de Acceso Aleatorio (RAM) del servidor sin necesidad de duplicarlos, lo que reduce drásticamente el consumo de recursos.
 
@@ -112,7 +112,7 @@
               p.mb-0.ps-2 #[span.ct1 this].nombre = nombre;
               p.mb-0.ps-2 #[span.ct1 this].correo = correo;
               p.mb-0 }
-          p El #[b constructor] es el molde maestro: define qué propiedades tendrá cada objeto creado a partir de esta clase; this hace referencia al objeto específico que se está creando en ese momento.
+          p El #[b constructor] es el molde maestro: define qué propiedades tendrá cada objeto creado a partir de esta clase; #[b this] hace referencia al objeto específico que se está creando en ese momento.
       .row.justify-content-center(titulo="Los métodos (guardados en el prototipo)")
         .col-11
           .tarjeta.tarjeta--gris.p-4.px-lg-5.mb-4
@@ -121,7 +121,7 @@
               p.mb-0.ps-4 #[span.ct4 console].#[span.ct2 log](`${#[span.ct1 this].#[span.ct3 nombre]} #[span.ct3 ha ingresado a la plataforma en tiempo real.]`);
               p.mb-0.ps-2 }
               p.mb-0 }
-          p Este método #[b no se copia] en cada objeto creado. JavaScript lo guarda automáticamente en el prototipo de Usuario, donde todos los objetos pueden consultarlo sin duplicarlo.
+          p Este método #[b no se copia] en cada objeto creado. JavaScript lo guarda automáticamente en el prototipo de #[b Usuario], donde todos los objetos pueden consultarlo sin duplicarlo.
 
     .row.align-items-center.titulo-icono.mb-4(data-aos='fade-right')
       .col-auto.titulo-icono-img
@@ -217,7 +217,7 @@
         .bg5.p-4.mb-4
           p Una vez que las clases y métodos tienen los nombres correctos, el siguiente paso es decidir dónde guardarlos. Es común que al inicio se escriba todo el proyecto en un solo y gigantesco archivo #[b index.js], sin embargo, en un entorno de desarrollo real con Node.js, esto es una receta para el desastre.
           p.mb-0 La regla de oro de la organización en POO es la modularidad: una clase por archivo.
-        p.mb-0 Para entender la importancia de esto, se puede imaginar un proyecto como un gran libro de actas físico. Si tres personas intentan escribir en la misma página al mismo tiempo, chocarán entre sí y arruinarán el documento. En el desarrollo de #[em software], esto ocurre cuando varios programadores trabajan en el mismo archivo usando repositorios de control de versiones como Git; el resultado es lo que se conoce como un merge conflict (conflicto de fusión).
+        p.mb-0 Para entender la importancia de esto, se puede imaginar un proyecto como un gran libro de actas físico. Si tres personas intentan escribir en la misma página al mismo tiempo, chocarán entre sí y arruinarán el documento. En el desarrollo de #[em software], esto ocurre cuando varios programadores trabajan en el mismo archivo usando repositorios de control de versiones como Git; el resultado es lo que se conoce como un #[em merge conflict] (conflicto de fusión).
       .col-lg-4.d-none.d-lg-block(data-aos="fade-left")
         img(src='@/assets/curso/temas/t2/9.png', alt='')
 
@@ -267,14 +267,14 @@
             p Un ejemplo es el sistema de matrículas: el objeto #[b Matricula] guarda en su interior un dato muy sensible: el resultado de la evaluación del aprendiz. Si el sistema no está encapsulado, cualquier fragmento de código podría alterar ese resultado de forma directa y arbitraria con una simple línea: #[b aprendiz.resultado = "A"]. Esto es un riesgo inaceptable, pues comprometería la validez e integridad de las evidencias de aprendizaje.
           .col-11
             p En las versiones modernas de JavaScript, la encapsulación se logra utilizando el prefijo # (numeral) antes del nombre de la propiedad o método para declararlo como privado. Esto convierte al objeto en una "caja negra"; su interior es inaccesible desde el exterior.
-            h5 Las aduanas: getters y setters
+            h5 Las aduanas: #[em getters] y #[em setters]
             ul.lista-ul.fa-lista
               li
                 i.fas.fa-circle
-                span.mb-0 #[b Getter] (para obtener): si la propiedad es privada, la única forma de consultarla desde el exterior es a través de un método público controlado llamado #[em getter]. Este actúa como una ventanilla de consulta: entrega el resultado, pero no permite modificarlo directamente.
+                span.mb-0 #[b #[em Getter]] (para obtener): si la propiedad es privada, la única forma de consultarla desde el exterior es a través de un método público controlado llamado #[em getter]. Este actúa como una ventanilla de consulta: entrega el resultado, pero no permite modificarlo directamente.
               li
                 i.fas.fa-circle
-                span.mb-0 #[b Setter] (para modificar): el #[em setter] es la "aduana" del objeto. Antes de permitir que el resultado cambie, verifica quién está intentando hacer el cambio, si el valor es válido (solo "A" o "D") y si la fecha límite no ha pasado. Solo si todo es correcto, la aduana permite el cambio.
+                span.mb-0 #[b #[em Setter]] (para modificar): el #[em setter] es la "aduana" del objeto. Antes de permitir que el resultado cambie, verifica quién está intentando hacer el cambio, si el valor es válido (solo "A" o "D") y si la fecha límite no ha pasado. Solo si todo es correcto, la aduana permite el cambio.
       .py-4.py-md-5.bg4(titulo="Herencia vs. composición: el dilema del gorila y la banana" :icono="require('@/assets/curso/temas/t2/tabs1-ico2.svg')")
         .row.justify-content-center
           .col-lg-4.col-11.col-md-8.mb-4

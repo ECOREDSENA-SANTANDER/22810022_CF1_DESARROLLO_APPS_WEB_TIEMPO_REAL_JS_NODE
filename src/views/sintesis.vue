@@ -3,7 +3,7 @@
   BannerInterno(icono="fas fa-sitemap" titulo="Síntesis")
   .container.tarjeta.tarjeta--blanca.p-4.p-md-5
     
-    p.mb-1 La construcción de aplicaciones web en tiempo real requiere una comprensión integral que articule los fundamentos lógicos de JavaScript, el modelado estructurado de la información y las dinámicas de un código limpio y modular. Reconocer el software como una construcción diseñada para equipos humanos, y no únicamente para máquinas, permite analizar su arquitectura con mayor objetividad, fortalecer la toma de decisiones técnicas y promover soluciones escalables que favorezcan la eficiencia del sistema y el trabajo colaborativo.
+    p.mb-1 La construcción de aplicaciones web en tiempo real requiere una comprensión integral que articule los fundamentos lógicos de JavaScript, el modelado estructurado de la información y las dinámicas de un código limpio y modular. Reconocer el #[em software] como una construcción diseñada para equipos humanos, y no únicamente para máquinas, permite analizar su arquitectura con mayor objetividad, fortalecer la toma de decisiones técnicas y promover soluciones escalables que favorezcan la eficiencia del sistema y el trabajo colaborativo.
     p.mb-4 Asimismo, el dominio del entorno de servidor con Node.js, el manejo de la concurrencia asíncrona y la implementación de conexiones persistentes confirman que el rendimiento es el pilar fundamental de la interactividad. Asumir un rol analítico y crítico frente a la evaluación de herramientas tecnológicas de terceros permite estructurar proyectos con rigor profesional, garantizando plataformas seguras, estables y plenamente alineadas con las exigencias de los usuarios y del ecosistema digital moderno.
     
     .row.justify-content-center

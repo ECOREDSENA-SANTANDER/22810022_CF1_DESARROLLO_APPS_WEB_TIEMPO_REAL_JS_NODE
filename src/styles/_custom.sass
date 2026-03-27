@@ -104,6 +104,8 @@ figcaption
   background-color:#F2F6E6
 .bg6
   background-color:#F8F8C5
+.bg7
+  background-color: #C6FFCF
 .ct1
   color: #901ECE !important
 .ct2
@@ -154,6 +156,9 @@ table
   tr, td, th
     vertical-align: top
     text-align: left !important
+.tabla1
+  td, th
+    border: 1px solid #1C526E
 .acordion 
   &__activo
     background-color: #B9F0E8 !important
@@ -203,8 +208,19 @@ table
 .tabs-b__tab--active:active, .tabs-b__tab--active:focus, .tabs-b__tab--active:hover, 
 .tabs-b__tab:active, .tabs-b__tab:focus, .tabs-b__tab:hover
   background-color: #FFFFEB
-
-      
+.linea-tiempo-e
+  &::before
+    background: #B9F0E8
+  &__item__header
+    p 
+      font-size: 30px
+      font-weight: bold
+.tarjeta-audio.color-acento-contenido 
+  .tarjeta-audio__texto
+    color: $color-sistema-texto
+    font-style: normal !important
+  .audio__btn
+    background-color: $color-acento-botones
 
 
 .crd--avatarHorizontal

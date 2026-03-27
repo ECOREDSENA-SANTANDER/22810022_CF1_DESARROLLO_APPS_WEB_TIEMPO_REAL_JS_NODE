@@ -19,7 +19,7 @@
     .row.justify-content-center.align-items-center.mb-5
       .col-lg-8(data-aos="fade-right")
         .bg5.p-4.mb-4
-          p.mb-0 Una variable en JavaScript es un identificador que permite acceder a un valor durante la ejecución del programa. Sin embargo, quedarse solo con la idea de que es únicamente "una caja donde se guardan cosas" lleva pronto a errores difíciles de rastrear: valores que cambian de forma inesperada, datos que se pierden y comportamientos distintos asociados al uso de palabras clave como var, let y const.
+          p.mb-0 Una variable en JavaScript es un identificador que permite acceder a un valor durante la ejecución del programa. Sin embargo, quedarse solo con la idea de que es únicamente "una caja donde se guardan cosas" lleva pronto a errores difíciles de rastrear: valores que cambian de forma inesperada, datos que se pierden y comportamientos distintos asociados al uso de palabras clave como #[b var], #[b let] y #[b const].
         p.mb-0 Una forma clara de entender este concepto es pensar en una mudanza. Para trasladar objetos de un lugar a otro, no se llevan sueltos; se utilizan cajas. A cada caja se le coloca una etiqueta ("Libros", "Cables", "Documentos") y luego se guarda el contenido en su interior. En JavaScript, una variable funciona exactamente así: una caja con una etiqueta donde se guarda información para utilizarla más adelante en el programa.
         p En el pasado, JavaScript utilizaba la palabra #[strong var] para crear estas cajas. Sin embargo, el lenguaje ha evolucionado y hoy se emplean dos términos más precisos: #[strong let] y #[strong const].
       .col-lg-4.d-none.d-lg-block(data-aos="fade-left")
@@ -50,7 +50,7 @@
 
     .cajon.color-adicional-1.p-4.px-lg-5
       h5 💡 Buena práctica: 
-      p.mb-0 Usar siempre const por defecto. Si durante el desarrollo se identifica que el valor necesita cambiar, se modifica la declaración a let. Este hábito previene errores inesperados y hace las aplicaciones más estables.
+      p.mb-0 Usar siempre #[b const] por defecto. Si durante el desarrollo se identifica que el valor necesita cambiar, se modifica la declaración a #[b let]. Este hábito previene errores inesperados y hace las aplicaciones más estables.
 
 
     Separador
@@ -72,7 +72,7 @@
     TabsA.color-acento-botones(data-aos="fade")
       .tarjeta.color-acento-botones.p-4(titulo="<em>String</em> (cadena de texto)")
         h4 #[em String] (cadena de texto)
-        p Cualquier información textual, una palabra, una frase o incluso un número que se procese como texto, como un código postal, se clasifica como #[em string]. Para que JavaScript lo interprete como texto y no como una instrucción, el contenido debe envolverse en comillas simples ' ', dobles " " o invertidas ` `.
+        p Cualquier información textual, una palabra, una frase o incluso un número que se procese como texto, como un código postal, se clasifica como #[em string]. Para que JavaScript lo interprete como texto y no como una instrucción, el contenido debe envolverse en comillas simples #[b ' '], dobles #[b " "] o invertidas #[b ` `].
         .tarjeta.tarjeta--gris.p-4.px-lg-5
           p Javascript
           p.mb-1 #[span.ct1 let] nombreUsuario  = #[span.ct2 "María"];
@@ -101,7 +101,7 @@
           li
             i.fas.fa-circle    
             span.mb-0 #[em #[b Null:]] se vacía la variable de forma deliberada, indicando explícitamente que "aquí no hay nada". Representa una ausencia de valor intencional.
-        p Cuando la información no se limita a un solo dato sino a un conjunto, por ejemplo, el nombre, la edad, el correo y las preferencias de un usuario simultáneamente, el desarrollo web recurre a tipos de datos estructurados: los arrays (listas ordenadas) y los objetos (estructuras detalladas), que se estudian en la sección 1.4.
+        p Cuando la información no se limita a un solo dato sino a un conjunto, por ejemplo, el nombre, la edad, el correo y las preferencias de un usuario simultáneamente, el desarrollo web recurre a tipos de datos estructurados: los #[em arrays] (listas ordenadas) y los objetos (estructuras detalladas), que se estudian en la sección 1.4.
 
 
     Separador
@@ -122,7 +122,7 @@
             li.mb-0
               i.fas.fa-circle
               span.mb-0 Una forma de controlar el contexto (definir qué variables puede "ver" y qué estado puede modificar).
-        p En JavaScript, las funciones son "ciudadanas de primera clase": pueden guardarse en variables, pasarse como argumentos y devolverse como resultados. Esto permite patrones potentes como los callbacks y las funciones de orden superior, pero también exige claridad para evitar confusión.
+        p En JavaScript, las funciones son "ciudadanas de primera clase": pueden guardarse en variables, pasarse como argumentos y devolverse como resultados. Esto permite patrones potentes como los #[em callbacks] y las funciones de orden superior, pero también exige claridad para evitar confusión.
       .col-lg-4.d-none.d-lg-block(data-aos="fade-left")
         img(src='@/assets/curso/temas/t1/6.png', alt='')
 
@@ -149,7 +149,7 @@
           img(src='@/assets/curso/temas/t1/acord1-1.png', alt='')
       .row.justify-content-center(titulo="Alcance léxico y <em>closures</em>")
         .col-11
-          p JavaScript usa alcance léxico: una función puede acceder a las variables del lugar donde fue definida. Este comportamiento produce los closures.
+          p JavaScript usa alcance léxico: una función puede acceder a las variables del lugar donde fue definida. Este comportamiento produce los #[em closures].
           .tarjeta.tarjeta--gris.p-4.px-lg-5.mb-4
             p Javascript
             p.mb-0 #[span.ct1 function] #[span.ct2 crearContador] () { 
@@ -210,10 +210,11 @@
       .col-lg-10
         .tarjeta.tarjeta--gris.p-4.px-lg-5
           p Javascript
-          p.mb-1 #[span.ct1 let] puntaje = #[span.ct2 0];
-          p.mb-0 puntaje = #[span.ct2 150];
+          p.mb-0 #[span.ct1 const] grupoA = { #[span.ct4 nombre]: #[span.ct3 "Grupo A"], #[span.ct4 aprendices]: [] }; #[span.ct1 const] copia = grupoA;
+          p.mb-0.ct5 // Se intenta agregar un aprendiz a la "copia"
+          p.mb-0 copia.aprendices.#[span.ct2 push](#[span.ct3 "Carlos"]);
     
-    p Al hacer const copia = grupoA, no se crea un objeto nuevo, se comparte el acceso al mismo objeto original. Una analogía clara es un documento en Google Docs: si se comparte el enlace con un compañero, ambos están editando el mismo archivo. Si el compañero borra un párrafo, desaparece para todos. En JavaScript, si se ejecuta copia.aprendices.push(...), el grupoA original también se verá alterado porque ambas variables apuntan a la misma dirección de memoria.
+    p Al hacer const #[b copia = grupoA], no se crea un objeto nuevo, se comparte el acceso al mismo objeto original. Una analogía clara es un documento en Google Docs: si se comparte el enlace con un compañero, ambos están editando el mismo archivo. Si el compañero borra un párrafo, desaparece para todos. En JavaScript, si se ejecuta #[b copia.aprendices.push(...)], el grupoA original también se verá alterado porque ambas variables apuntan a la misma dirección de memoria.
     
     .row.justify-content-center.mb-5
       .col-lg-4.col-md-7.col-10.mb-3.mb-lg-0
@@ -223,7 +224,7 @@
           img(src='@/assets/curso/temas/t1/10.svg', alt='')
       .col-lg-5
         .bg6.p-4.px-lg-5.d-flex.flex-column.justify-content-center
-          p Para desarrollar #[em software] robusto, se necesita distinguir claramente entre:
+          p.mb-0 Para desarrollar #[em software] robusto, se necesita distinguir claramente entre:
         .bg4.p-4.p-lg-5.d-flex.flex-column.justify-content-center
           ul.lista-ul.fa-lista
             li.mb-0
@@ -308,7 +309,7 @@
 
     .row.justify-content-center.mb-5
       .col-lg-7(data-aos="fade-right")      
-        p En el desarrollo de #[em software] educativo, los condicionales no son simplemente la sintaxis if o else; representan en código las políticas y normas del sistema. Constantemente se establecen reglas para:
+        p En el desarrollo de #[em software] educativo, los condicionales no son simplemente la sintaxis #[b if] o #[b else]; representan en código las políticas y normas del sistema. Constantemente se establecen reglas para:
         ul.lista-ul--color.fa-lista
           li
             i.fas.fa-comment-dots
@@ -331,7 +332,7 @@
       .col
         h3.mb-0.titulo-icono-text.py-2.ps-md-3 Funcionamiento: claridad, legibilidad y mantenibilidad
     
-    p Escribir un condicional en JavaScript es técnicamente sencillo, pero el verdadero reto profesional radica en hacerlo comprensible. Un condicional puede volverse rápidamente ilegible si se encadenan múltiples reglas sin orden ni concierto, lo que en el gremio se conoce como “código espagueti”.
+    p Escribir un condicional en JavaScript es técnicamente sencillo, pero el verdadero reto profesional radica en hacerlo comprensible. Un condicional puede volverse rápidamente ilegible si se encadenan múltiples reglas sin orden ni concierto, lo que en el gremio se conoce como #[b “código espagueti”].
     p.mb-1 El desarrollo profesional siempre debe priorizar:
     ul.lista-ul.fa-lista
       li.mb-0
@@ -412,7 +413,7 @@
       .col-lg-5.d-none.d-lg-block(data-aos="fade-right")
         img(src='@/assets/curso/temas/t1/17.png', alt='')
       .col-lg-7(data-aos="fade-left")
-        p Lo fundamental no es memorizar la palabra clave if, sino la semántica detrás de ella. Al revisar este código, cualquier miembro del equipo debe poder afirmar: "este condicional implementa la regla funcional del sistema y protege la integridad del proceso de evaluación".
+        p Lo fundamental no es memorizar la palabra clave #[b if], sino la semántica detrás de ella. Al revisar este código, cualquier miembro del equipo debe poder afirmar: "este condicional implementa la regla funcional del sistema y protege la integridad del proceso de evaluación".
         p Los condicionales son, en esencia, decisiones que toma el #[em software] en nombre de sus creadores. Una regla condicional mal planteada o que emite mensajes de error confusos puede generar frustración y deserción. Por el contrario, una regla clara y diseñada con criterio ayuda a orientar, corrige el rumbo sin castigar y garantiza una experiencia de aprendizaje fluida y confiable.
 
 
@@ -570,7 +571,7 @@
       .col-lg-4.col-md-8(data-aos="fade-left")
         img(src='@/assets/curso/temas/t1/22.png', alt='')              
 
-    p La programación tiene una analogía directa con la redacción de un libro: el lenguaje de programación es la gramática, pero el clean code (código limpio) es el estilo, la ortografía y la coherencia de la historia.
+    p La programación tiene una analogía directa con la redacción de un libro: el lenguaje de programación es la gramática, pero el #[em clean code] (código limpio) es el estilo, la ortografía y la coherencia de la historia.
 
     TabsA.color-acento-botones.mb-5(data-aos="fade")
       .tarjeta.color-acento-botones.p-4(titulo="Variables y constantes (los sustantivos)")

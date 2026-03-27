@@ -49,7 +49,7 @@
               img(src="@/assets/curso/temas/t4/ico3.svg", alt="")
             .col
               h5 Impacto en el rendimiento (peso de la herramienta)
-              p.mb-1 En el desarrollo web, la velocidad lo es todo y cada kilobyte cuenta. Importar una biblioteca masiva de 2 MB solo para utilizar una pequeña función que formatea fechas es una negligencia técnica que ralentiza la aplicación. En Node.js, donde el rendimiento es crítico, el peso de cada dependencia debe justificarse.
+              p.mb-1 En el desarrollo web, la velocidad lo es todo y cada #[em kilobyte] cuenta. Importar una biblioteca masiva de 2 MB solo para utilizar una pequeña función que formatea fechas es una negligencia técnica que ralentiza la aplicación. En Node.js, donde el rendimiento es crítico, el peso de cada dependencia debe justificarse.
               p.mb-0 #[b Pregunta clave:] ¿el tamaño de la biblioteca se justifica con las funcionalidades que aporta?
         .crd.crd--avatarHorizontal.crd--last.py-4
           .row.align-items-center
