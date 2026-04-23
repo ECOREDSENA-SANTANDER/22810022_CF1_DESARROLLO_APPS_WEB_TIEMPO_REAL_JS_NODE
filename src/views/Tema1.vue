@@ -46,7 +46,7 @@
         .col-lg-10
           .tarjeta.tarjeta--gris.p-4.px-lg-5
             p Javascript
-            p.mb-0 #[span.ct1 const] añoDeNacimiento = #[span.ct2 1995]
+            p.mb-0 #[span.ct1 const] añoDeNacimiento = #[span.ct2 1995];
 
     .cajon.color-adicional-1.p-4.px-lg-5
       h5 💡 Buena práctica: 
@@ -563,7 +563,7 @@
     #t_1_7.titulo-segundo.color-acento-contenido(data-aos='fade-right')
       h2 1.7  Declaración de funciones y código limpio 
 
-    .row.justify-content-center.align-items-center.mb-5
+    .row.justify-content-center.align-items-center.mb-4
       .col-lg-8(data-aos="fade-right")
         .bg5.p-4.mb-4
           p.mb-0 Luego de dominar cómo el código toma decisiones mediante condicionales y cómo procesa grandes volúmenes de información a través de los ciclos, se enfrenta a una revelación fundamental en el desarrollo profesional: hacer que el código funcione es apenas el primer paso; el verdadero reto es hacerlo comprensible.
@@ -571,8 +571,16 @@
       .col-lg-4.col-md-8(data-aos="fade-left")
         img(src='@/assets/curso/temas/t1/22.png', alt='')              
 
-    p La programación tiene una analogía directa con la redacción de un libro: el lenguaje de programación es la gramática, pero el #[em clean code] (código limpio) es el estilo, la ortografía y la coherencia de la historia.
+    p.mb-5 La programación tiene una analogía directa con la redacción de un libro: el lenguaje de programación es la gramática, pero el #[em clean code] (código limpio) es el estilo, la ortografía y la coherencia de la historia.
 
+    .row.align-items-center.titulo-icono.mb-4(data-aos='fade-right')
+      .col-auto.titulo-icono-img
+        img(src='@/assets/curso/temas/t1/subt.svg', alt='')
+      .col
+        h3.mb-0.titulo-icono-text.py-2.ps-md-3 El arte del nombramiento
+    
+    p Un nombre debe revelar la intención de quien lo escribió. No se necesitan comentarios extensos si los nombres son suficientemente descriptivos.
+    
     TabsA.color-acento-botones.mb-5(data-aos="fade")
       .tarjeta.color-acento-botones.p-4(titulo="Variables y constantes (los sustantivos)")
         h4 Variables y constantes (los sustantivos)

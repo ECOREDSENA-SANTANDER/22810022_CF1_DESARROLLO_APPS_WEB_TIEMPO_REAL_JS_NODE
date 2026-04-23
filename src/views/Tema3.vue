@@ -60,7 +60,7 @@
           li
             .lista-ol--cuadro__vineta
               span.text-dark.fw-bold 2
-            span.mb-0 Inmediatamente, delega esa tarea pesada a sus ayudantes de cocina (un conjunto de herramientas internas en Node.js conocido como libuv y el propio sistema operativo).
+            span.mb-0 Inmediatamente, delega esa tarea pesada a sus ayudantes de cocina (un conjunto de herramientas internas en Node.js conocido como #[em libuv] y el propio sistema operativo).
           li
             .lista-ol--cuadro__vineta
               span.text-dark.fw-bold 3
@@ -134,10 +134,10 @@
       .col
         h3.mb-0.titulo-icono-text.py-2.ps-md-3 Evaluación crítica: el criterio de selección profesional
 
-    .row.justify-content-center.mb-5
+    .row.justify-content-center.align-items-center.mb-5
       .col-lg-7(data-aos="fade-right")      
         p Sin embargo, tener acceso gratuito a millones de herramientas conlleva una responsabilidad enorme. Un desarrollador #[em junior] podría sentirse tentado a instalar paquetes de forma indiscriminada para cualquier tarea menor. Un desarrollador #[em senior] sabe que cada paquete añadido es código de terceros ejecutándose en su servidor.
-        p Por ello, se debe aprender a auditar y seleccionar estas herramientas con rigor. No se instala un paquete solo porque aparece en el primer resultado de búsqueda. Se evalúan criterios como la popularidad (número de descargas), la actividad del mantenimiento (frecuencia de actualizaciones), la calidad del código (revisando el repositorio en GitHub) y la reputación de sus autores. Esta capacidad de selección crítica es lo que distingue a un desarrollador competente de uno que simplemente copia y pega soluciones sin entender sus implicaciones. 
+        p Por ello, se debe aprender a auditar y seleccionar estas herramientas con rigor. No se instala un paquete solo porque aparece en el primer resultado de búsqueda.
       .col-lg-5.d-none.d-lg-block(data-aos="fade-left")
         img(src='@/assets/curso/temas/t3/9.png', alt='')
 
@@ -205,8 +205,8 @@
         img(src='@/assets/curso/temas/t3/10.png', alt='')
       .col-lg-7(data-aos="fade-left")
         p Tras levantar un servidor robusto con Node.js y las herramientas del ecosistema npm, se llega frente al último gran obstáculo conceptual para construir la aplicación. Hasta este punto, la web se ha comportado bajo unas reglas muy estrictas: el modelo de comunicación HTTP.
-        p Para que una aplicación educativa sea verdaderamente de tiempo real, como un chat de asesoría sincrónica o un tablero colaborativo donde varios aprendices dibujan al mismo tiempo, el modelo HTTP tradicional de petición y respuesta, lamentablemente, fracasa. Para superar esta limitación, es necesario adentrarse en el mundo de los protocolos de red de bajo nivel, específicamente TCP (#[em Transmission Control Protocol]) y los #[em sockets].    
-
+        p Para que una aplicación educativa sea verdaderamente de tiempo real, como un chat de asesoría sincrónica o un tablero colaborativo donde varios aprendices dibujan al mismo tiempo, el modelo HTTP tradicional de petición y respuesta, lamentablemente, fracasa.
+        
     .row.align-items-center.titulo-icono.mb-4(data-aos='fade-right')
       .col-auto.titulo-icono-img
         img(src='@/assets/curso/temas/t1/subt.svg', alt='')
@@ -227,6 +227,8 @@
         img(src='@/assets/curso/temas/t1/subt.svg', alt='')
       .col
         h3.mb-0.titulo-icono-text.py-2.ps-md-3 El funcionamiento: el #[em handshake] y el #[em upgrade]
+
+    p ¿Cómo se pasa de una página web normal (HTTP) a esta llamada telefónica constante? Todo ocurre mediante un proceso de negociación inicial muy elegante.
 
     .row.justify-content-center
       .col-lg-10
@@ -343,7 +345,7 @@
                 @audio-hover="mostrarIndicadorTarjetaAudio = false"
               )
                 .indicador--click(v-if="mostrarIndicadorTarjetaAudio")
-              p.mb-0 Para complementar la comprensión del #[em event loop] y el modelo de I/O no bloqueante, se sugiere escuchar el siguiente recurso de audio: El #[em event loop] y el modelo de I/O no bloqueante en Node.js.
+              p.mb-0 Para complementar la comprensión del #[em event loop] y el modelo de I/O no bloqueante, se sugiere explorar el siguiente recurso de audio: El #[em event loop] y el modelo de I/O no bloqueante en Node.js.
 
 
     Separador

@@ -230,7 +230,7 @@
           li
             span.mb-0 📄 Instructor.js   → contiene solo la clase Instructor.
           li
-            span.mb-0 📄 Evaluacion.js   → gestiona únicamente la lógica de las pruebas
+            span.mb-0 📄 Evaluacion.js   → gestiona únicamente la lógica de las pruebas.
       .tarjeta.color-acento-botones.p-4(titulo="Paso 2. Trabajar en paralelo sin interferencias")
         h4 Paso 2. Trabajar en paralelo sin interferencias
         p Si se necesita actualizar la forma en que se calcula la asistencia de los aprendices y otra persona necesita agregar una función a los instructores, cada una trabaja en su propio archivo. No hay colisiones.

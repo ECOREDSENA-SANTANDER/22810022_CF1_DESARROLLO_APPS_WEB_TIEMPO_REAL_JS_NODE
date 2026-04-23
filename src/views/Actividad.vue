@@ -101,22 +101,22 @@ export default {
           opciones: [
             {
               id: 'a',
-              texto: 'Number.',
+              texto: '<em>Number.</em>',
               esCorrecta: false,
             },
             {
               id: 'b',
-              texto: 'String.',
+              texto: '<em>String.</em>',
               esCorrecta: false,
             },
             {
               id: 'c',
-              texto: 'Object.',
+              texto: '<em>Object.</em>',
               esCorrecta: false,
             },
             {
               id: 'd',
-              texto: 'Boolean.',
+              texto: '<em>Boolean.</em>',
               esCorrecta: true,
             },
           ],
@@ -160,7 +160,7 @@ export default {
         },
         {
           id: 5,
-          texto: '¿Qué es un closure en JavaScript?',
+          texto: '¿Qué es un <em>closure</em> en JavaScript?',
           imagen: require('@/assets/actividad/imagen5.png'),
           barajarRespuestas: true,
           opciones: [
@@ -324,7 +324,7 @@ export default {
         },
         {
           id: 10,
-          texto: '¿Qué función cumple el event loop en Node.js?',
+          texto: '¿Qué función cumple el <em>event loop</em> en Node.js?',
           imagen: require('@/assets/actividad/imagen10.png'),
           barajarRespuestas: true,
           opciones: [
@@ -335,13 +335,13 @@ export default {
             },
             {
               id: 'b',
-              texto: 'Instalar paquetes de software.',
+              texto: 'Instalar paquetes de <em>software</em>.',
               esCorrecta: false,
             },
             {
               id: 'c',
               texto:
-                'Gestionar la ejecución de eventos y callbacks sin bloquear el sistema.',
+                'Gestionar la ejecución de eventos y <em>callbacks</em> sin bloquear el sistema.',
               esCorrecta: true,
             },
             {
@@ -357,7 +357,8 @@ export default {
         },
         {
           id: 11,
-          texto: '¿Qué describe mejor el alcance léxico (scope) en JavaScript?',
+          texto:
+            '¿Qué describe mejor el alcance léxico (<em>scope</em>) en JavaScript?',
           imagen: require('@/assets/actividad/imagen1.png'),
           barajarRespuestas: true,
           opciones: [
@@ -392,7 +393,7 @@ export default {
         {
           id: 12,
           texto:
-            '¿Cuál es el principal beneficio de utilizar funciones de flecha (arrow functions)?',
+            '¿Cuál es el principal beneficio de utilizar funciones de flecha (<em>arrow functions</em>)?',
           imagen: require('@/assets/actividad/imagen2.png'),
           barajarRespuestas: true,
           opciones: [
@@ -460,7 +461,7 @@ export default {
         {
           id: 14,
           texto:
-            '¿Qué ventaja ofrece la copia profunda (deep copy) de un objeto?',
+            '¿Qué ventaja ofrece la copia profunda (<em>deep copy</em>) de un objeto?',
           imagen: require('@/assets/actividad/imagen4.png'),
           barajarRespuestas: true,
           opciones: [
