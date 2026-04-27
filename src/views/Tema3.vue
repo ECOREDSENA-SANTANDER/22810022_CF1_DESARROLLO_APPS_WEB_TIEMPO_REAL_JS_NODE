@@ -341,7 +341,7 @@
             .bg-white.tarjeta.p-4
               TarjetaAudio.color-acento-contenido.mb-4(
                 texto="Pódcast"
-                :audio="require('@/assets/componentes/audios/audio-ej.mp3')"
+                :audio="require('@/assets/componentes/audios/podcast.mp3')"
                 @audio-hover="mostrarIndicadorTarjetaAudio = false"
               )
                 .indicador--click(v-if="mostrarIndicadorTarjetaAudio")
